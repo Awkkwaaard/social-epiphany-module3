@@ -83,6 +83,7 @@
         <!--Delete the post heading goes here-->
         <h3>Delete the post</h3>
         <hr />
+        <!--styling-->
         <p :style="{ margin: '20px 0 10px 0' }">Are you sure you want to delete the post?</p>
         <button class="submit-btn" :style="{ background: '#BF00FF' }" @click.prevent="deletePost(postData)" type="submit">
           Yes
@@ -107,7 +108,7 @@
           <h4>{{ this.postData.title }}</h4>
           <p>{{ this.postData.body }}</p>
         </div>
-        <!--Internal styling--> <!--Penelope completed this section-->
+        <!--Styling--> <!--Penelope completed this section-->
         <div :style="{ padding: '5px 0 5px 7px', display: 'flex', background: 'white', margin: '5px' }"
           v-for="comment in comments" :key="comment.id">
           <img :style="{ margin: '8px 5px 0 0', background: 'lightblue', borderRadius: '0.4rem' }" width="40px"
