@@ -204,7 +204,7 @@ export default {
       this.fetchComments();
       this.showViewPost = true;
     },
-    //Edit postData
+    //Edit postData - Penelope
     editClosePanel(postData) {
       axios
         .put(`https://ch589.sse.codesandbox.io/posts/${postData.id}`, {
@@ -221,7 +221,7 @@ export default {
           this.showEditPost = false;
         });
     },
-    //View Close Panel
+    //View Close Panel - Cynta
     viewClosePanel() {
       this.showViewPost = false;
       this.postData.id = "";
@@ -229,7 +229,7 @@ export default {
       this.postData.title = "";
       this.postData.body = "";
     },
-    //createPost
+    //createPost - Cynta
     createPost() {
       axios
         .post("https://ch589.sse.codesandbox.io/posts/", this.postData)
@@ -242,7 +242,7 @@ export default {
           this.showAddPost = false;
         });
     },
-    //getPost Data
+    //getPost Data - Cynta
     getPostData(post) {
       this.toggleEditPanel();
       this.postData.userName = post.userName;
@@ -250,7 +250,7 @@ export default {
       this.postData.body = post.body;
       this.postData.id = post.id;
     },
-    //update Post
+    //update Post - Penelope
     updatePost(postData) {
       axios
         .put(`https://ch589.sse.codesandbox.io/posts/${postData.id}`, {
@@ -267,7 +267,7 @@ export default {
           this.showEditPost = false;
         });
     },
-    //deletPost
+    //deletePost - Penelope
     deletePost(postData) {
       axios
         .delete(`https://ch589.sse.codesandbox.io/posts/${postData.id}`)
@@ -280,7 +280,7 @@ export default {
           this.showDeletePost = false;
         });
     },
-    //SubmitComment
+    //SubmitComment - Cynta
     submitComment() {
       axios
         .post("https://ch589.sse.codesandbox.io/comments/", this.commentData)
