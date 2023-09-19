@@ -41,7 +41,7 @@
     </div>
 
   <div id="app">
-    <!-- LOGO --> <!--Penelope began this section -->
+    <!-- LOGO --> <!--Cynta added in logo -->
     <img src="./assets/logo.png" height="150">
     <button class="add-post" @click="toggleCreatePanel()">Add Post</button>
     <!-- Log Out Button added by Kayleigh -->
@@ -162,10 +162,10 @@
           </div>
         </div>
         <!--Author label goes here-->
-        <label class="label">Author</label><br>
+        <label class="label">UserName:</label><br>
         <input type="text" id="name" v-model="commentData.author" autoComplete="off" class="input-box"><br>
         <!--Comment label goes here-->
-        <label class="label">Comment</label><br>
+        <label class="label">Comment:</label><br>
         <input type="text" id="comment" v-model="commentData.message" autoComplete="off" class="input-box"><br>
         <!--Submit button goes here-->
         <button class="submit-btn" @click.prevent="submitComment()" type="submit">Comment</button>
