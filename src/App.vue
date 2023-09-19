@@ -1,8 +1,51 @@
 <template lang="html">
+<div>
+  <!-- Login --> <!-- Kayleigh began this section --> 
+  <div class="temp">
+      <div class="button-group">
+        <button class="login-button" id="login-open">Login</button>
+      </div>
+
+      <section class="home">
+        <div class="form-container">
+          <i class="uil uil-times"></i>
+          <!-- Login Form -->
+          <div class="form login-form">
+            <form action="#">
+              <h4>Login</h4>
+              <a><span class="material-symbols-outlined form-close">close</span></a>
+              <div class="input-form">
+                <input type="email" placeholder="Enter your email" required>
+                <span class="material-symbols-outlined email">mail</span>
+              </div>
+              <div class="input-form">
+                <input type="password" placeholder="Enter your password" required>
+                <span class="material-symbols-outlined lock">lock</span>
+              </div>
+              <div class="option-field">
+                <span class="checkbox">
+                  <input type="checkbox" id="check">
+                  <label for="check">Remember me</label>
+                </span>
+                <a href="#" class="forgot-pw">Forgot password?</a>
+              </div>
+            </form>
+            <button class="login">Login</button>
+              <div class="login-signup">
+                  Don't have an account? 
+                  <a href="#" id="signup">Sign Up</a>
+              </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
   <div id="app">
     <!-- LOGO --> <!--Penelope began this section -->
     <img src="./assets/logo.png" height="150">
     <button class="add-post" @click="toggleCreatePanel()">Add Post</button>
+    <!-- Log Out Button added by Kayleigh -->
+    <button class="log-out">Log Out</button> 
     <!--Tag line--> <!--Penelope completed this section-->
     <p>Find a friend! Share an epiphany event! Socialise! Do this at Social Epiphany today.</p>
     <hr />
@@ -129,7 +172,9 @@
       </div>
     </div>
   </div>
+</div>
 </template>
+<!-- Login functionality is found in main.js rather in this script section - Kayleigh -->
 <!--Penelope ended and completed this section-->
 <!--Cynta & Penelope collaborated this code together-->
 <script>
