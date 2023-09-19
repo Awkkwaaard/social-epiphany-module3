@@ -4,7 +4,7 @@
     <img src="./assets/logo.png" height="150">
     <button class="add-post" @click="toggleCreatePanel()">Add Post</button>
     <!--Tag line--> <!--Penelope completed this section-->
-    <p>Find a friend! Share an epiphany! Socialise! Do this at Social Epiphany today.</p>
+    <p>Find a friend! Share an epiphany event! Socialise! Do this at Social Epiphany today.</p>
     <hr />
     <div class="list" v-for="(post) in posts" :key="post.id">
       <h3>
