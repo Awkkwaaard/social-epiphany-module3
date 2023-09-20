@@ -68,10 +68,10 @@
           {{ post.userName }}
           <!--Buttons--> <!--Penelope completed this section-->
           <!--Delete button goes here - Penelope -->
-          <button class="button" :style="{ background: '#fff', color: '#BF00FF' }"
+          <button class="button" :style="{ background: '#fff', color: '#FF0000' }"
             @click="toggleDeletePanel(post)">Delete</button>
           <!--Edit button goes here - Penelope -->
-          <button class="button" :style="{ background: '#fff', color: '#BF00FF' }"
+          <button class="button" :style="{ background: '#fff', color: '#11F9CF' }"
             @click="getPostData(post)">Edit</button>
             <!--View button goes here - Penelope -->
           <button class="button" :style="{ background: '#fff', color: '#BF00FF' }"
@@ -145,12 +145,12 @@
           <hr />
           <!--styling-->
           <p :style="{ margin: '20px 0 10px 0' }">Are you sure you want to delete the post?</p>
-          <button class="submit-btn" :style="{ background: '#BF00FF' }" @click.prevent="deletePost(postData)"
+          <button class="submit-btn-yes" :style="{ background: '#ff0000', colour: '#fff' }" @click.prevent="deletePost(postData)"
             type="submit">
             Yes
           </button>
           <!--Submit button goes here-->
-          <button class="submit-btn" @click="showDeletePost = false" type="submit">
+          <button class="submit-btn" :style="{ background: '#11F9CF', colour: '#fff' }" @click="showDeletePost = false" type="submit">
             No
           </button>
         </div>

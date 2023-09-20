@@ -339,6 +339,19 @@
   border-radius: 15px;
 }
 
+.submit-btn-yes {
+  color: white;
+  font-size: 0.9rem;
+  cursor: pointer;
+  border: none;
+  background: #FF0000;
+  padding: 10px 15px;
+  font-weight: 700;
+  line-height: 1.3em;
+  margin: 10px 7px 0 0;
+  border-radius: 15px;
+}
+
 /* Update Button - Penelope */
 .update-btn {
   color: white;
@@ -365,9 +378,11 @@
   color: #BF00FF;
 }
 
+
 /* button hover goes here - Cynta */
 .button:hover {
   background: #11F9CF;
+  color:#BF00FF;
 }
 
 /* Add post goes here - Penelope */
