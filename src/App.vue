@@ -1,19 +1,23 @@
 <template lang="html">
-<div>
-  <!-- Login --> <!-- Kayleigh began this section --> 
-  <div class="temp">
-    
+  <div>
+    <!-- Login --> <!-- Kayleigh began this section -->
+    <div class="temp">
+
       <div class="button-group">
+        <!--lightbulb goes here-->
         <img class="light-bulb" src="./assets/se-logo-glow.png" alt="Social Epiphany Light Bulb">
+        <!--heading-->
         <h2>Welcome to Social Epiphany!</h2>
+        <!--login button-->
         <button class="login-button" id="login-open">Login</button>
       </div>
 
       <section class="home">
+        <!--Form container-->
         <div class="form-container">
           <img class="light-bulb" src="./assets/se-logo-glow.png" alt="Social Epiphany Light Bulb">
           <i class="uil uil-times"></i>
-          <!-- Login Form -->
+          <!-- Login Form begins-->
           <div class="form login-form">
             <form id="login" action="#">
               <h4>Login</h4>
@@ -22,168 +26,177 @@
                 <input name="email" type="email" placeholder="Enter your email" required>
                 <span class="material-symbols-outlined email">mail</span>
               </div>
+              <!--Input form - enter password-->
               <div class="input-form">
                 <input name="password" type="password" placeholder="Enter your password" required>
                 <span class="material-symbols-outlined lock">lock</span>
               </div>
+              <!--option-field checkbox-->
               <div class="option-field">
                 <span class="checkbox">
                   <input type="checkbox" id="check">
                   <label for="check">Remember me</label>
                 </span>
+                <!--Forgot password goes here-->
                 <a href="#" class="forgot-pw">Forgot password?</a>
               </div>
             </form>
+            <!--Login sign up button-->
             <button class="login">Login</button>
-              <div class="login-signup">
-                  Don't have an account? 
-                  <a href="#" id="signup">Sign Up</a>
-              </div>
+            <div class="login-signup">
+              Don't have an account?
+              <a href="#" id="signup">Sign Up</a>
+            </div>
           </div>
         </div>
       </section>
     </div>
+    <!--Login form ends-->
 
-  <div id="app">
-    <!-- LOGO --> <!--Cynta added in logo -->
-    <img src="./assets/logo.png" height="150">
-    <button class="add-post" @click="toggleCreatePanel()">Add Post</button>
-    <!-- Log Out Button added by Kayleigh -->
-    <button class="log-out">Log Out</button> 
-    <!--Tag line--> <!--Penelope completed this section-->
-    <p>Find a friend! Share an epiphany event! Socialise! Do this at Social Epiphany today.</p>
-    <hr />
-    <div class="list" v-for="(post) in posts" :key="post.id">
-      <h3>
-        {{ post.userName }}
-        <!--Buttons--> <!--Penelope completed this section-->
-        <!--Delete button goes here-->
-        <button class="button" :style="{ background: '#fff', color: '#BF00FF' }"
-          @click="toggleDeletePanel(post)">Delete</button>
-        <!--Edit button goes here-->
-        <button class="button" :style="{ background: '#fff', color: '#BF00FF' }" @click="getPostData(post)">Edit</button>
-        <button class="button" :style="{ background: '#fff', color: '#BF00FF' }"
-          @click="toggleViewPanel(post)">View</button>
-      </h3>
-      <h4>{{ post.title }}</h4>
-      <p>{{ post.body }}</p>
-    </div>
-    <!--Penelope Completed this section-->
-    <!--Show Add Post Section Begins--> <!--Penelope began and completed this section-->
-    <div class="modal" v-if="showAddPost">
-      <div class="modal-content">
-        <span @click="showAddPost = false" class="close">&times;</span>
-        <!--Add new post goes here-->
-        <h3>Add New Post</h3>
-        <hr />
-        <form>
-          <!--UserName goes here-->
-          <label class="label">UserName:</label><br>
-          <input type="text" id="userName" v-model="postData.userName" autoComplete="off" class="input-box">
-          <br>
-          <!--Title goes here-->
-          <label class="label">Title:</label><br>
-          <input type="text" v-model="postData.title" id="title" autoComplete="off" class="input-box">
-          <br>
-          <!--Description goes here-->
-          <label class="label">Description:</label><br>
-          <input type="text" v-model="postData.body" id="body" autoComplete="off" class="description-box">
-          <br>
+    <div id="app">
+      <!-- LOGO goes here--> <!--Cynta added in logo -->
+      <img src="./assets/logo.png" height="150">
+      <!-- Add post button goes here - Penelope -->
+      <button class="add-post" @click="toggleCreatePanel()">Add Post</button>
+      <!-- Log Out Button added by Kayleigh -->
+      <button class="log-out">Log Out</button>
+      <!--Tag line goes here--> <!--Penelope completed this section-->
+      <p>Find a friend! Share an epiphany event! Socialise! Do this at Social Epiphany today.</p>
+      <hr />
+      <div class="list" v-for="(post) in posts" :key="post.id">
+        <h3>
+          {{ post.userName }}
+          <!--Buttons--> <!--Penelope completed this section-->
+          <!--Delete button goes here - Penelope -->
+          <button class="button" :style="{ background: '#fff', color: '#BF00FF' }"
+            @click="toggleDeletePanel(post)">Delete</button>
+          <!--Edit button goes here - Penelope -->
+          <button class="button" :style="{ background: '#fff', color: '#BF00FF' }"
+            @click="getPostData(post)">Edit</button>
+          <button class="button" :style="{ background: '#fff', color: '#BF00FF' }"
+            @click="toggleViewPanel(post)">View</button>
+        </h3>
+        <h4>{{ post.title }}</h4>
+        <p>{{ post.body }}</p>
+      </div>
+      <!--Penelope Completed this section-->
+      <!--Show Add Post Section Begins--> <!--Penelope began and completed this section-->
+      <div class="modal" v-if="showAddPost">
+        <div class="modal-content">
+          <span @click="showAddPost = false" class="close">&times;</span>
+          <!--Add new post goes here - Penelope -->
+          <h3>Add New Post</h3>
+          <hr />
+          <form>
+            <!--UserName goes here - Penelope -->
+            <label class="label">UserName:</label><br>
+            <input type="text" id="userName" v-model="postData.userName" autoComplete="off" class="input-box">
+            <br>
+            <!--Title goes here - Penelope -->
+            <label class="label">Title:</label><br>
+            <input type="text" v-model="postData.title" id="title" autoComplete="off" class="input-box">
+            <br>
+            <!--Label description goes here - Penelope -->
+            <label class="label">Description:</label><br>
+            <input type="text" v-model="postData.body" id="body" autoComplete="off" class="description-box">
+            <br>
+            <!--Submit button goes here - Penelope-->
+            <button class="submit-btn" @click.prevent="createPost()" type="submit">Add Post</button>
+          </form>
+        </div>
+        <!--Show Add Post Section ends--> <!--Penelope completed and ended this section-->
+      </div>
+      <!--Show Edit post begins--> <!--Cynta began and completed this section-->
+      <!--Modal-->
+      <div class="modal" v-if="showEditPost">
+        <div class="modal-content">
+          <span @click="editClosePanel(postData)" class="close">&times;</span>
+          <!--Edit post-->
+          <h3>Edit the Post</h3>
+          <hr />
+          <!--Edit Form begins here--> <!--Cynta completed this section-->
+          <form>
+            <!--UserName goes here-->
+            <label class="label">UserName</label><br>
+            <input type="text" v-model="postData.userName" id="userName" class="input-box">
+            <br>
+            <!--Title goes here-->
+            <label class="label">Title</label><br>
+            <input type="text" v-model="postData.title" id="title" class="input-box">
+            <br>
+            <!--Description goes here-->
+            <label class="label">Description</label><br>
+            <input type="text" v-model="postData.body" id="body" class="input-box">
+            <br>
+            <!--Update Button goes here-->
+            <button class="update-btn" @click.prevent="updatePost(postData)" type="submit">Update</button>
+          </form>
+          <!--Edit form ends here-->
+        </div>
+      </div>
+      <!--Cynta ended and completed this section-->
+      <!--Show delete post begins here--> <!--Cynta began and completed this section-->
+      <div class="modal" v-if="showDeletePost">
+        <div class="modal-content">
+          <span @click="showDeletePost = false" class="close">&times;</span>
+          <!--Delete the post heading goes here-->
+          <h3>Delete the post</h3>
+          <hr />
+          <!--styling-->
+          <p :style="{ margin: '20px 0 10px 0' }">Are you sure you want to delete the post?</p>
+          <button class="submit-btn" :style="{ background: '#BF00FF' }" @click.prevent="deletePost(postData)"
+            type="submit">
+            Yes
+          </button>
           <!--Submit button goes here-->
-          <button class="submit-btn" @click.prevent="createPost()" type="submit">Add Post</button>
-        </form>
-      </div>
-      <!--Show Add Post Section ends--> <!--Penelope completed and ended this section-->
-    </div>
-    <!--Show Edit post begins--> <!--Cynta began and completed this section-->
-    <div class="modal" v-if="showEditPost">
-      <div class="modal-content">
-        <span @click="editClosePanel(postData)" class="close">&times;</span>
-        <!--Edit post-->
-        <h3>Edit the Post</h3>
-        <hr />
-        <!--Edit Form begins here--> <!--Cynta completed this section-->
-        <form>
-          <!--UserName goes here-->
-          <label class="label">UserName</label><br>
-          <input type="text" v-model="postData.userName" id="userName" class="input-box">
-          <br>
-          <!--Title goes here-->
-          <label class="label">Title</label><br>
-          <input type="text" v-model="postData.title" id="title" class="input-box">
-          <br>
-          <!--Description goes here-->
-          <label class="label">Description</label><br>
-          <input type="text" v-model="postData.body" id="body" class="input-box">
-          <br>
-          <!--Update Button goes here-->
-          <button class="update-btn" @click.prevent="updatePost(postData)" type="submit">Update</button>
-        </form>
-        <!--Edit form ends here-->
-      </div>
-    </div>
-    <!--Cynta ended and completed this section-->
-    <!--Show delete post begins here--> <!--Cynta began and completed this section-->
-    <div class="modal" v-if="showDeletePost">
-      <div class="modal-content">
-        <span @click="showDeletePost = false" class="close">&times;</span>
-        <!--Delete the post heading goes here-->
-        <h3>Delete the post</h3>
-        <hr />
-        <!--styling-->
-        <p :style="{ margin: '20px 0 10px 0' }">Are you sure you want to delete the post?</p>
-        <button class="submit-btn" :style="{ background: '#BF00FF' }" @click.prevent="deletePost(postData)" type="submit">
-          Yes
-        </button>
-        <!--Submit button goes here-->
-        <button class="submit-btn" @click="showDeletePost = false" type="submit">
-          No
-        </button>
-      </div>
-      <!--Show delete post ends here --> <!--Cynta completed and ended this section-->
-    </div>
-    <!--Show view post begins here --> <!--Penelope began and completed this section-->
-    <div class="modal" v-if="showViewPost">
-      <div class="modal-content">
-        <span @click="viewClosePanel()" class="close">&times;</span>
-        <!--View post goes here-->
-        <h3>View Post</h3>
-        <hr />
-        <!--List-->
-        <div class="list">
-          <h3>{{ this.postData.userName }}</h3>
-          <h4>{{ this.postData.title }}</h4>
-          <p>{{ this.postData.body }}</p>
+          <button class="submit-btn" @click="showDeletePost = false" type="submit">
+            No
+          </button>
         </div>
-        <!--Styling--> <!--Penelope completed this section-->
-        <div :style="{ padding: '5px 0 5px 7px', display: 'flex', background: 'white', margin: '5px' }"
-          v-for="comment in comments" :key="comment.id">
-          <img :style="{ margin: '8px 5px 0 0', background: 'lightblue', borderRadius: '0.4rem' }" width="40px"
-            height="40px" />
-          <div>
-            <h3>{{ comment.author }}</h3>
-            <p>{{ comment.message }}</p>
+        <!--Show delete post ends here --> <!--Cynta completed and ended this section-->
+      </div>
+      <!--Show view post begins here --> <!--Penelope began and completed this section-->
+      <div class="modal" v-if="showViewPost">
+        <div class="modal-content">
+          <span @click="viewClosePanel()" class="close">&times;</span>
+          <!--View post goes here - Penelope-->
+          <h3>View Post</h3>
+          <hr />
+          <!--List - Penelope -->
+          <div class="list">
+            <h3>{{ this.postData.userName }}</h3>
+            <h4>{{ this.postData.title }}</h4>
+            <p>{{ this.postData.body }}</p>
           </div>
+          <!--Styling--> <!--Penelope completed this section-->
+          <div :style="{ padding: '5px 0 5px 7px', display: 'flex', background: 'white', margin: '5px' }"
+            v-for="comment in comments" :key="comment.id">
+            <img :style="{ margin: '8px 5px 0 0', background: 'lightblue', borderRadius: '0.4rem' }" width="40px"
+              height="40px" />
+            <div>
+              <h3>{{ comment.author }}</h3>
+              <p>{{ comment.message }}</p>
+            </div>
+          </div>
+          <!--Author label goes here - Penelope-->
+          <label class="label">UserName:</label><br>
+          <input type="text" id="name" v-model="commentData.author" autoComplete="off" class="input-box"><br>
+          <!--Comment label goes here - Penelope -->
+          <label class="label">Comment:</label><br>
+          <input type="text" id="comment" v-model="commentData.message" autoComplete="off" class="input-box"><br>
+          <!--Submit button goes here - Penelope -->
+          <button class="submit-btn" @click.prevent="submitComment()" type="submit">Comment</button>
         </div>
-        <!--Author label goes here-->
-        <label class="label">UserName:</label><br>
-        <input type="text" id="name" v-model="commentData.author" autoComplete="off" class="input-box"><br>
-        <!--Comment label goes here-->
-        <label class="label">Comment:</label><br>
-        <input type="text" id="comment" v-model="commentData.message" autoComplete="off" class="input-box"><br>
-        <!--Submit button goes here-->
-        <button class="submit-btn" @click.prevent="submitComment()" type="submit">Comment</button>
       </div>
     </div>
   </div>
-</div>
 </template>
 <!-- Login functionality is found in main.js rather in this script section - Kayleigh -->
 <!--Penelope ended and completed this section-->
 <!--Cynta & Penelope collaborated this code together-->
 <script>
 import axios from "axios";
-//Form details
+//Form details - Penelope & Cynta
 export default {
   data() {
     return {
@@ -206,7 +219,7 @@ export default {
       showViewPost: false,
     };
   },
-//Code sandbox link
+  //Code sandbox link - Penelope & Cynta
   methods: {
     fetchPosts() {
       axios
@@ -329,7 +342,7 @@ export default {
           this.showDeletePost = false;
         });
     },
-    //SubmitComment - Cynta
+    //SubmitComment - Penelope
     submitComment() {
       axios
         .post("https://ch589.sse.codesandbox.io/comments/", this.commentData)
