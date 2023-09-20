@@ -73,6 +73,7 @@
           <!--Edit button goes here - Penelope -->
           <button class="button" :style="{ background: '#fff', color: '#BF00FF' }"
             @click="getPostData(post)">Edit</button>
+            <!--View button goes here - Penelope -->
           <button class="button" :style="{ background: '#fff', color: '#BF00FF' }"
             @click="toggleViewPanel(post)">View</button>
         </h3>
