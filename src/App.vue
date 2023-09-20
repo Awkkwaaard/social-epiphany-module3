@@ -20,6 +20,7 @@
           <!-- Login Form begins-->
           <div class="form login-form">
             <form id="login" action="#">
+              <!--Login heading-->
               <h4>Login</h4>
               <a><span class="material-symbols-outlined form-close">close</span></a>
               <div class="input-form">
