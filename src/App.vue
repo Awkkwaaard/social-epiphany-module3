@@ -62,7 +62,7 @@
       <!-- Log Out Button added by Kayleigh -->
       <button class="log-out">Log Out</button>
       <!--Tag line goes here--> <!--Penelope completed this section-->
-      <p>Find a friend! Share an epiphany event! Socialise! Do this at Social Epiphany today.</p>
+      <p id="tag-line">Find a friend! Share an epiphany event! Socialise! Do this at Social Epiphany today.</p>
       <hr />
       <div class="list" v-for="(post) in posts" :key="post.id">
         <h3>
