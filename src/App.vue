@@ -2,24 +2,28 @@
 <div>
   <!-- Login --> <!-- Kayleigh began this section --> 
   <div class="temp">
+    
       <div class="button-group">
+        <img class="light-bulb" src="./assets/se-logo-glow.png" alt="Social Epiphany Light Bulb">
+        <h2>Welcome to Social Epiphany!</h2>
         <button class="login-button" id="login-open">Login</button>
       </div>
 
       <section class="home">
         <div class="form-container">
+          <img class="light-bulb" src="./assets/se-logo-glow.png" alt="Social Epiphany Light Bulb">
           <i class="uil uil-times"></i>
           <!-- Login Form -->
           <div class="form login-form">
-            <form action="#">
+            <form id="login" action="#">
               <h4>Login</h4>
               <a><span class="material-symbols-outlined form-close">close</span></a>
               <div class="input-form">
-                <input type="email" placeholder="Enter your email" required>
+                <input name="email" type="email" placeholder="Enter your email" required>
                 <span class="material-symbols-outlined email">mail</span>
               </div>
               <div class="input-form">
-                <input type="password" placeholder="Enter your password" required>
+                <input name="password" type="password" placeholder="Enter your password" required>
                 <span class="material-symbols-outlined lock">lock</span>
               </div>
               <div class="option-field">

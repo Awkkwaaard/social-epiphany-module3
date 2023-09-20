@@ -23,6 +23,23 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+/* Start Page Text Styling */
+.button-group h2{
+  font-family: Arial, Helvetica, sans-serif;
+  color: white;
+  text-shadow: 4px 4px 10px rgba(0,0,0,0.5);
+  font-size: 1.64rem;
+}
+
+/* Start Page Logo Sizing and Positioning */
+.light-bulb {
+  height: 5em;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /* Start page login button styling - Kayleigh */
@@ -33,7 +50,7 @@
   padding: 0.5em 1em;
   font-size: 1.5em;
   font-weight: 600;
-  border-radius: 0.5em;
+  border-radius: 15px;
   cursor: pointer;
   margin: 0.5em 0.5em;
   box-shadow: 4px 9px 10px -1px rgba(0, 0, 0, 0.35);
@@ -51,7 +68,7 @@
   color: #fff;
   padding: 0.5em 1em;
   font-size: 1.5em;
-  border-radius: 0.5em;
+  border-radius: 15px;
   cursor: pointer;
   margin: 0.5em 0.5em;
   box-shadow: 4px 9px 10px -1px rgba(0, 0, 0, 0.35);
@@ -69,7 +86,7 @@
   height: 100vh;
   width: 100%;
   background: rgb(255,255,255);
-  background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(191,0,255,1) 100%);
+  background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(17,249,207,1) 100%);
   background-size: cover;
   background-position: center;
   font-family: Arial, Helvetica, sans-serif;
@@ -86,7 +103,7 @@
   transform: translate(-50%, -50%);
   background-color: #fff;
   padding: 2em;
-  border-radius: 0.5em;
+  border-radius: 15px;
   box-shadow: 4px 9px 10px -1px rgba(0, 0, 0, 0.35);
   opacity: 0;
   pointer-events: none;
@@ -108,13 +125,20 @@
   position: absolute;
   top: 10px;
   right: 20px;
-  color: #000;
-  font-size: 1.5em;
+  color: #aaaaaa;
+  font-size: 2em;
+  font-weight: bold;
   cursor: pointer;
+}
+
+/* Sign in Close button hover styling - Kayleigh */
+.form-close:hover {
+  color: #000;
 }
 
 /* Login Title Styling and Positioning - Kayleigh */
 .form-container h4 {
+  margin-top: 8px;
   font-size: 1.5em;
   color: #000;
   text-align: center;
@@ -123,7 +147,7 @@
 /* Text Box for sign in form sizing - Kayleigh */
 .input-form {
   position: relative;
-  margin-top: 30px;
+  margin-top: 20px;
   width: 100%;
   height: 40px;
 }
@@ -136,7 +160,8 @@
   outline: none;
   padding: 0 30px;
   color: #333;
-  border-bottom: 1.5px solid #000;
+  border: 1.5px solid #d1d6dc;
+  border-radius: 15px;
 }
 
 /* Text Box for sign in form when clicked styling - Kayleigh */
@@ -155,8 +180,8 @@
 /* Styling for icons used in sign in form - Kayleigh */
 .input-form span.email,
 .input-form span.lock {
-  left: 0;
-  color: #000;
+  left: 5px;
+  color: #a2a5aa;
 }
 
 /* Styling when clicked for icons used in sign in form - Kayleigh */
@@ -213,8 +238,11 @@
   border: none;
   padding: 0.75em 1em ;
   margin-top: 20px;
-  width: 100%;
-  border-radius: 0.5em;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 40%;
+  border-radius: 15px;
   cursor: pointer;
   font-weight: 600;
 }
@@ -242,7 +270,7 @@
   color: black;
   margin: auto 2%;
   padding: 1%;
-  border-radius: 1%;
+  border-radius: 15px;
   background-color: #BF00FF;
 }
 /* Input box goes here */
@@ -255,7 +283,7 @@
   background-color: #fff;
   background-clip: padding-box;
   border: 1px solid #ced4da;
-  border-radius: 0.3rem;
+  border-radius: 15px;
   margin-bottom: 5px;
 }
  /* Label goes here */
@@ -273,7 +301,7 @@
   background-color: #fff;
   background-clip: padding-box;
   border: 1px solid #ced4da;
-  border-radius: 0.3rem;
+  border-radius: 15px;
 }
 /* Button - Penelope */
 .button {
@@ -287,7 +315,7 @@
   font-weight: 700;
   line-height: 1em;
   margin-right: 5px;
-  border-radius: 0.4rem;
+  border-radius: 15px;
 }
 
 /* Submit Button - Penelope */
@@ -301,7 +329,7 @@
   font-weight: 700;
   line-height: 1.3em;
   margin: 10px 7px 0 0;
-  border-radius: 0.3rem;
+  border-radius: 15px;
 }
 
 /* Update Button - Penelope */
@@ -315,7 +343,7 @@
   font-weight: 700;
   line-height: 1.3em;
   margin: 10px 0 0 0;
-  border-radius: 0.3rem;
+  border-radius: 15px;
 }
 /* Update button hover goes here - Cynta */ 
 .update-btn:hover {
@@ -342,7 +370,7 @@
   padding: 13px 20px;
   font-weight: 600;
   line-height: 1em;
-  border-radius: 0.4rem;
+  border-radius: 15px;
 }
 
 /* Add post hover goes here - Cynta */
@@ -362,7 +390,7 @@
   padding: 13px 20px;
   font-weight: 600;
   line-height: 1em;
-  border-radius: 0.4rem;
+  border-radius: 15px;
 }
 
 /* Log out hover goes here - Kayleigh */
@@ -373,11 +401,17 @@
 
 /* list goes here - Cynta*/
 .list {
-  margin: 5px;
+  margin: 15px 5px;
   background: white;
   padding: 10px;
   border-radius: 15px;
   pointer-events: auto;
+  box-shadow: 4px 9px 10px -1px rgba(0, 0, 0, 0.35);
+}
+
+/* Prevents box-shadow appearing in the view post popup - Kayleigh*/
+.modal-content .list {
+  box-shadow: none;
 }
 
 h3,
@@ -395,7 +429,7 @@ p {
   pointer-events: auto;
   background-clip: padding-box;
   border: 1px solid rgba(0, 0, 0, 0.2);
-  border-radius: 0.3rem;
+  border-radius: 15px;
 }
 /* close */
 .close {
@@ -421,4 +455,62 @@ p {
   color: black;
   text-decoration: none;
   cursor: pointer;
+}
+
+/* Outline matching for text boxes- Kayleigh */
+#name {
+  outline: none;
+}
+
+/* Outline matching for text boxes- Kayleigh */
+#name:focus {
+  border-color: #BF00FF;
+}
+
+/* Outline matching for text boxes- Kayleigh */
+#comment {
+  outline: none;
+}
+
+/* Outline matching for text boxes- Kayleigh */
+#comment:focus {
+  border-color: #BF00FF;
+}
+
+/* Outline matching for text boxes- Kayleigh */
+#userName {
+  outline: none;
+}
+
+/* Outline matching for text boxes- Kayleigh */
+#userName:focus {
+  border-color: #BF00FF;
+}
+
+/* Outline matching for text boxes- Kayleigh */
+#title {
+  outline: none;
+}
+
+/* Outline matching for text boxes- Kayleigh */
+#title:focus {
+  border-color: #BF00FF;
+}
+
+/* Outline matching for text boxes- Kayleigh */
+#body {
+  outline: none;
+}
+
+/* Outline matching for text boxes- Kayleigh */
+#body:focus {
+  border-color: #BF00FF;
+}
+
+/* Footer Styling */
+footer {
+  margin: auto 2%;
+  padding-top: 3px;
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
 }
