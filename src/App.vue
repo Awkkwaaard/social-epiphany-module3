@@ -56,11 +56,11 @@
 
     <div id="app">
       <!-- LOGO goes here--> <!--Cynta added in logo -->
-      <img src="./assets/logo.png" height="150">
-      <!-- Add post button goes here - Penelope -->
-      <button class="add-post" @click="toggleCreatePanel()">Add Post</button>
+      <img src="./assets/logo.png" height="150" alt="social epiphany logo">
       <!-- Log Out Button added by Kayleigh -->
       <button class="log-out">Log Out</button>
+      <!-- Add post button goes here - Penelope -->
+      <button class="add-post" @click="toggleCreatePanel()">Add Post</button>
       <!--Tag line goes here--> <!--Penelope completed this section-->
       <p id="tag-line">Find a friend! Share an epiphany event! Socialise! Do this at Social Epiphany today.</p>
       <hr />
@@ -69,7 +69,7 @@
           {{ post.userName }}
           <!--Buttons--> <!--Penelope completed this section-->
           <!--Delete button goes here - Penelope -->
-          <button class="button" :style="{ background: '#FF0000', color: '#FFF' }"
+          <button class="button" :style="{ background: '#BF0020', color: '#FFF' }"
             @click="toggleDeletePanel(post)">Delete</button>
           <!--Edit button goes here - Penelope -->
           <button class="button" :style="{ background: '#BF00FF', color: '#FFF' }"
@@ -146,7 +146,7 @@
           <hr />
           <!--styling-->
           <p :style="{ margin: '20px 0 10px 0' }">Are you sure you want to delete the post?</p>
-          <button class="submit-btn-yes" :style="{ background: '#FF0000', colour: '#fff' }" @click.prevent="deletePost(postData)"
+          <button class="submit-btn-yes" :style="{ background: '#BF0020', colour: '#fff' }" @click.prevent="deletePost(postData)"
             type="submit">
             Yes
           </button>

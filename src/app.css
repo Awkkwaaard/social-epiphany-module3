@@ -59,7 +59,7 @@
 
 /* Start page login button hover styling - Kayleigh */
 .login-button:hover {
-  background-color: #11F9CF;
+  background-color: #FAEF59;
   color: #BF00FF;
 }
 
@@ -328,6 +328,7 @@ color: #11F9CF;
   line-height: 1em;
   margin-right: 5px;
   border-radius: 15px;
+  box-shadow: 3px 3px 3px -1px rgba(0, 0, 0, 0.35);
 }
 
 /* Submit Button - Penelope */
@@ -342,6 +343,7 @@ color: #11F9CF;
   line-height: 1.3em;
   margin: 10px 7px 0 0;
   border-radius: 15px;
+  box-shadow: 3px 3px 3px -1px rgba(0, 0, 0, 0.35);
 }
 /* Submit button Yes - Penelope */
 .submit-btn-yes {
@@ -355,6 +357,7 @@ color: #11F9CF;
   line-height: 1.3em;
   margin: 10px 7px 0 0;
   border-radius: 15px;
+  box-shadow: 3px 3px 3px -1px rgba(0, 0, 0, 0.35);
 }
 
 .submit-btn-no {
@@ -368,6 +371,7 @@ color: #11F9CF;
   line-height: 1.3em;
   margin: 10px 7px 0 0;
   border-radius: 15px;
+  box-shadow: 3px 3px 3px -1px rgba(0, 0, 0, 0.35);
 }
 /* Update Button - Penelope */
 .update-btn {
@@ -381,6 +385,7 @@ color: #11F9CF;
   line-height: 1.3em;
   margin: 10px 0 0 0;
   border-radius: 15px;
+  box-shadow: 3px 3px 3px -1px rgba(0, 0, 0, 0.35);
 }
 
 /* Update button hover goes here - Cynta */
@@ -404,7 +409,7 @@ color: #11F9CF;
 
 /* Add post goes here - Penelope */
 .add-post {
-  color: white;
+  color: #FAEF59;
   font-size: 1rem;
   float: right;
   cursor: pointer;
@@ -418,7 +423,7 @@ color: #11F9CF;
 
 /* Add post hover goes here - Cynta */
 .add-post:hover {
-  background: #11F9CF;
+  background: #FAEF59;
   color: #BF00FF;
 }
 
