@@ -69,13 +69,13 @@
           {{ post.userName }}
           <!--Buttons--> <!--Penelope completed this section-->
           <!--Delete button goes here - Penelope -->
-          <button class="button" :style="{ background: '#fff', color: '#FF0000' }"
+          <button class="button" :style="{ background: '#FF0000', color: '#FFF' }"
             @click="toggleDeletePanel(post)">Delete</button>
           <!--Edit button goes here - Penelope -->
-          <button class="button" :style="{ background: '#fff', color: '#11F9CF' }"
+          <button class="button" :style="{ background: '#BF00FF', color: '#FFF' }"
             @click="getPostData(post)">Edit</button>
             <!--View button goes here - Penelope -->
-          <button class="button" :style="{ background: '#fff', color: '#BF00FF' }"
+          <button class="button" :style="{ background: '#11F9CF', color: '#BF00FF' }"
             @click="toggleViewPanel(post)">View</button>
         </h3>
         <h4>{{ post.title }}</h4>
@@ -146,12 +146,12 @@
           <hr />
           <!--styling-->
           <p :style="{ margin: '20px 0 10px 0' }">Are you sure you want to delete the post?</p>
-          <button class="submit-btn-yes" :style="{ background: '#ff0000', colour: '#fff' }" @click.prevent="deletePost(postData)"
+          <button class="submit-btn-yes" :style="{ background: '#FF0000', colour: '#fff' }" @click.prevent="deletePost(postData)"
             type="submit">
             Yes
           </button>
           <!--Submit button goes here-->
-          <button class="submit-btn" :style="{ background: '#11F9CF', colour: '#fff' }" @click="showDeletePost = false" type="submit">
+          <button class="submit-btn-no" :style="{ background: '#BF00FF', colour: '#fff' }" @click="showDeletePost = false" type="submit">
             No
           </button>
         </div>
@@ -173,8 +173,6 @@
           <!--Styling--> <!--Penelope completed this section-->
           <div :style="{ padding: '5px 0 5px 7px', display: 'flex', background: 'white', margin: '5px' }"
             v-for="comment in comments" :key="comment.id">
-            <img :style="{ margin: '8px 5px 0 0', background: 'lightblue', borderRadius: '0.4rem' }" width="40px"
-              height="40px" />
             <div>
               <h3>{{ comment.author }}</h3>
               <p>{{ comment.message }}</p>

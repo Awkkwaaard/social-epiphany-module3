@@ -357,6 +357,18 @@ color: #11F9CF;
   border-radius: 15px;
 }
 
+.submit-btn-no {
+  color: white;
+  font-size: 0.9rem;
+  cursor: pointer;
+  border: none;
+  background: #BF00FF;
+  padding: 10px 15px;
+  font-weight: 700;
+  line-height: 1.3em;
+  margin: 10px 7px 0 0;
+  border-radius: 15px;
+}
 /* Update Button - Penelope */
 .update-btn {
   color: white;
