@@ -74,7 +74,7 @@
           <!--Edit button goes here - Penelope -->
           <button class="button" :style="{ background: '#BF00FF', color: '#FFF' }"
             @click="getPostData(post)">Edit</button>
-            <!--View button goes here - Penelope -->
+          <!--View button goes here - Penelope -->
           <button class="button" :style="{ background: '#11F9CF', color: '#BF00FF' }"
             @click="toggleViewPanel(post)">View</button>
         </h3>
@@ -146,12 +146,13 @@
           <hr />
           <!--styling-->
           <p :style="{ margin: '20px 0 10px 0' }">Are you sure you want to delete the post?</p>
-          <button class="submit-btn-yes" :style="{ background: '#BF0020', colour: '#fff' }" @click.prevent="deletePost(postData)"
-            type="submit">
+          <button class="submit-btn-yes" :style="{ background: '#BF0020', colour: '#fff' }"
+            @click.prevent="deletePost(postData)" type="submit">
             Yes
           </button>
           <!--Submit button goes here-->
-          <button class="submit-btn-no" :style="{ background: '#BF00FF', colour: '#fff' }" @click="showDeletePost = false" type="submit">
+          <button class="submit-btn-no" :style="{ background: '#BF00FF', colour: '#fff' }" @click="showDeletePost = false"
+            type="submit">
             No
           </button>
         </div>

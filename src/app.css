@@ -309,10 +309,11 @@
   border: 1px solid #ced4da;
   border-radius: 15px;
 }
+
 /* Tag-line goes here - Penelope added */
-#tag-line{
-font-weight: bold;
-color: #11F9CF;
+#tag-line {
+  font-weight: bold;
+  color: #11F9CF;
 }
 
 /* Button - Penelope */
@@ -345,6 +346,7 @@ color: #11F9CF;
   border-radius: 15px;
   box-shadow: 3px 3px 3px -1px rgba(0, 0, 0, 0.35);
 }
+
 /* Submit button Yes - Penelope */
 .submit-btn-yes {
   color: white;
@@ -373,6 +375,7 @@ color: #11F9CF;
   border-radius: 15px;
   box-shadow: 3px 3px 3px -1px rgba(0, 0, 0, 0.35);
 }
+
 /* Update Button - Penelope */
 .update-btn {
   color: white;
@@ -404,7 +407,7 @@ color: #11F9CF;
 /* button hover goes here - Cynta */
 .button:hover {
   background: #11F9CF;
-  color:#BF00FF;
+  color: #BF00FF;
 }
 
 /* Add post goes here - Penelope */
